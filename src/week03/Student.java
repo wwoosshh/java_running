@@ -1,10 +1,10 @@
 package week03;
 
 public class Student {
-    String name;
-    int age;
-    String major;
-    double gpa;
+    private String name;
+    private int age;
+    private String major;
+    private double gpa;
 
     String getGrade() {
         if (gpa >= 4) return "A";
@@ -12,6 +12,32 @@ public class Student {
         if (gpa >= 2) return "C";
         return "F";
 
+    }
+    public String getName() {
+        return this.name;
+    }
+    public int getAge() {
+        return this.age;
+    }
+    public void setAge(int age) {
+        if (age < 0 || age > 150) {
+            System.out.println("잘못된 나이: " + age);
+            return;    // 무시
+        }
+        this.age = age;
+    }
+    public void setGpa(double gpa) {
+        if (gpa < 0.0 || gpa > 4.5) {
+            System.out.println("잘못된 GPA: " + gpa);
+            return;
+        }
+        this.gpa = gpa;
+    }
+    public Student(String name, int age, String major, double gpa){
+        this.name = name;
+        this.age = age;
+        this.major = major;
+        this.gpa = gpa;
     }
 
     void introduce() {
