@@ -14,8 +14,6 @@ public class Animal {
     }
 
     void introduce() {
-        System.out.println(name + " (" + age + "살) - " +
-                getClass().getSimpleName());
-        // getClass().getSimpleName() → 실제 클래스 이름 ("Dog", "Cat"등)
+        System.out.println(name + " (" + age + "살) - " + getClass().getSimpleName());
     }
 }
