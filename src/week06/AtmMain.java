@@ -98,12 +98,12 @@ public class AtmMain {
 
     private static void handleHistory(Account account) {
         List<String> history = account.getHistory();
-        if(history.isEmpty()){
+        if (history.isEmpty()) {
             System.out.println("거래 내역이 없습니다.");
             return;
         }
         System.out.println("===== 거래 내역 =====");
-        for(String log : history){
+        for (String log : history) {
             System.out.println(log);
         }
     }
